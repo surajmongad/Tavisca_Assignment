@@ -111,8 +111,8 @@
       "id": "W2r1532"
     },
     {
-     "email": "smongad@gmail.com",
-    "password": "suraj2020",
+      "email": "smongad@gmail.com",
+      "password": "suraj2020",
       "id": "ayxfB8P"
     },
     {
@@ -124,6 +124,16 @@
       "email": "smongad@gmail.com",
       "password": "suraj2020",
       "id": "-pNNpDY"
+    },
+    {
+      "email": "smongad@gmail.com",
+      "password": "suraj2020",
+      "id": "MHVbBWE"
+    },
+    {
+      "email": "smongad@gmail.com",
+      "password": "suraj2020",
+      "id": "ypKQkTh"
     }
   ],
   "register": [
@@ -139,5 +149,13 @@
       "id": "Wi4dbR8"
     }
   ],
-  "products": []
+  "products": [
+    {
+      "productName": "sSD",
+      "productNumber": 2,
+      "productCategory": "DDDDF",
+      "productPrice": 12342,
+      "id": 1
+    }
+  ]
 }
