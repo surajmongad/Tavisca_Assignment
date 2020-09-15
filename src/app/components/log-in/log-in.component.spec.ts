@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { LogInComponent } from './log-in.component';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -17,15 +17,15 @@ describe('LogInComponent', () => {
   };
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
+      await TestBed.configureTestingModule({
       declarations: [LogInComponent],
       imports: [FormsModule,
         RouterTestingModule,
         HttpClientTestingModule,
         ReactiveFormsModule],
-      providers: [AuthService, provideMockStore({ initialState })]
+        providers: [AuthService, provideMockStore({ initialState })]
     }).compileComponents();
-    store = TestBed.inject(MockStore);
+      store = TestBed.inject(MockStore);
   }));
 
   beforeEach(() => {

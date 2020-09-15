@@ -70,7 +70,6 @@ export class AuthService {
       .pipe(catchError(this.errorHandler));
   }
 
-
   errorHandler(error) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {

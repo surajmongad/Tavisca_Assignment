@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { HeaderComponent } from './header.component';
 import { RouterTestingModule } from '@angular/router/testing';
 import { HttpClientTestingModule } from '@angular/common/http/testing';
@@ -16,14 +16,14 @@ describe('HeaderComponent', () => {
   };
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
+      await TestBed.configureTestingModule({
       declarations: [HeaderComponent],
       providers: [provideMockStore({ initialState }), AuthService],
       imports: [RouterTestingModule, HttpClientTestingModule],
     })
       .compileComponents();
-    store = TestBed.inject(MockStore);
-  }));
+      store = TestBed.inject(MockStore);
+    }));
 
   beforeEach(() => {
     fixture = TestBed.createComponent(HeaderComponent);

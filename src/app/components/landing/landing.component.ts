@@ -39,6 +39,7 @@ export class LandingComponent implements OnInit {
   }
 
   logOut(): void {
+    // tslint:disable-next-line:new-parens
     this.store.dispatch(new LogOut);
   }
 

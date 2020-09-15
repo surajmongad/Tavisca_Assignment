@@ -1,4 +1,4 @@
-import { async, ComponentFixture, TestBed } from '@angular/core/testing';
+import { ComponentFixture, TestBed } from '@angular/core/testing';
 import { LandingComponent } from './landing.component';
 import { CUSTOM_ELEMENTS_SCHEMA } from '@angular/core';
 import { RouterTestingModule } from '@angular/router/testing';
@@ -18,14 +18,14 @@ describe('LandingComponent', () => {
   };
 
   beforeEach(async(() => {
-      TestBed.configureTestingModule({
+      await TestBed.configureTestingModule({
       declarations: [LandingComponent],
       imports: [RouterTestingModule, FormsModule, ReactiveFormsModule, HttpClientTestingModule],
-        providers: [AuthService, provideMockStore({ initialState })],
+      providers: [AuthService, provideMockStore({ initialState })],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();
-    store = TestBed.inject(MockStore);
+      store = TestBed.inject(MockStore);
   }));
 
   beforeEach(() => {

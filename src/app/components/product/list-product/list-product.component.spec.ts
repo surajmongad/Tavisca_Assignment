@@ -10,7 +10,6 @@ describe('ListProductComponent', () => {
   let component: ListProductComponent;
   let fixture: ComponentFixture<ListProductComponent>;
   let store: MockStore;
-  let authService: AuthService;
   const initialState = {
     isAuthenticated: false,
     user: null,
@@ -23,9 +22,8 @@ describe('ListProductComponent', () => {
       imports: [RouterTestingModule, HttpClientTestingModule],
       providers: [provideMockStore({ initialState }), AuthService],
     })
-      .compileComponents();
+    .compileComponents();
     store = TestBed.inject(MockStore);
-    authService = TestBed.get(AuthService);
   });
 
   beforeEach(() => {
