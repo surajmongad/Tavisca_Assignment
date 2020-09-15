@@ -1,11 +1,11 @@
-import { Component, OnInit, ViewChild } from '@angular/core';
+import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
 import { Observable, from } from 'rxjs';
 import { User } from '../../models/user';
 import { AppState, selectAuthState } from '../../store/app.states';
 import { LogIn } from '../../store/actions/auth.actions';
 import { AuthService } from '../../services/auth.service';
-import { FormGroup, FormBuilder, NgForm } from '@angular/forms';
+
 
 @Component({
   selector: 'app-log-in',
@@ -13,11 +13,12 @@ import { FormGroup, FormBuilder, NgForm } from '@angular/forms';
   styleUrls: ['./log-in.component.scss']
 })
 export class LogInComponent implements OnInit {
-  user: User = new User();
+  incorrectError = false;
   getState: Observable<any>;
   errorMessage: string | null;
   allSignupData: any;
-  incorrectError = false;
+  user: User = new User();
+
 
   constructor(private store: Store<AppState>, private authService: AuthService) {
     this.getState = this.store.select(selectAuthState);

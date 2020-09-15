@@ -1,5 +1,4 @@
 import { Component, OnInit } from '@angular/core';
-import { Product } from '../../../models/product';
 import { AuthService } from '../../../services/auth.service';
 import { AppState, selectMusicState } from '../../../store/app.states';
 import { Store } from '@ngrx/store';
@@ -18,7 +17,7 @@ export class ListProductComponent implements OnInit {
   getState: Observable<any>;
   errorMessage: string | null;
 
-  constructor(public authService: AuthService, private store: Store<AppState>, private router: Router) {
+  constructor(private authService: AuthService, private store: Store<AppState>, private router: Router) {
     this.getState = this.store.select(selectMusicState);
   }
   showUpdateForm(): void {
@@ -30,13 +29,11 @@ export class ListProductComponent implements OnInit {
     this.store.subscribe(data => {
       this.products = data.product.products;
     });
-
   }
 
   deleteMusic(id: number): void {
-    this.authService.deleteProduct(id).subscribe(res => {
-      this.products = this.products.filter(item => item.id !== id);
+    this.authService.deleteProduct(id).subscribe((res) => {
+      this.products = this.products.filter((item) => item.id !== id);
     });
   }
-
 }

@@ -19,10 +19,12 @@ describe('LogInComponent', () => {
   beforeEach(async(() => {
     TestBed.configureTestingModule({
       declarations: [LogInComponent],
-      imports: [FormsModule, RouterTestingModule, HttpClientTestingModule, ReactiveFormsModule],
-      providers: [provideMockStore({ initialState }), AuthService]
-    })
-      .compileComponents();
+      imports: [FormsModule,
+        RouterTestingModule,
+        HttpClientTestingModule,
+        ReactiveFormsModule],
+      providers: [AuthService, provideMockStore({ initialState })]
+    }).compileComponents();
     store = TestBed.inject(MockStore);
   }));
 

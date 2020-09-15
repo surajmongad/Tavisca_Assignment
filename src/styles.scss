@@ -1,13 +1,13 @@
 /* You can add global styles to this file, and also import other style files */
+* {
+    box-sizing: border-box;
+}
+
 body {
     background-color: rgb(195 202 218 / 59%);
     margin: 0px;
     padding: 0px;
     font-size: 16px;
-}
-
-* {
-    box-sizing: border-box;
 }
 
 .grid-container-main {
@@ -26,7 +26,6 @@ body {
     -moz-user-select: none;
     -ms-user-select: none;
     user-select: none;
-   //background-color: transparent;
     border: 2px solid rgb(7, 7, 7);
     padding: 0.1rem 0.3rem;
     font-size: 0.8rem;
@@ -35,7 +34,6 @@ body {
     -webkit-transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     transition: color .15s ease-in-out, background-color .15s ease-in-out, border-color .15s ease-in-out, box-shadow .15s ease-in-out;
     outline: none;
-
     &:hover,
     &:focus {
         background-color: #212529;
@@ -60,7 +58,6 @@ input {
     -moz-osx-font-smoothing: grayscale;
     transition: 0.2s linear;
     background-color: #fff !important;
-
     &input:focus {
         color: #333;
         border: 1px solid #44c4e7;

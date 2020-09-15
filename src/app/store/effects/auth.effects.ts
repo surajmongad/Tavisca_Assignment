@@ -1,6 +1,6 @@
 import { Injectable } from '@angular/core';
 import { Router } from '@angular/router';
-import { switchMap, concatMap } from 'rxjs/operators';
+import { switchMap } from 'rxjs/operators';
 import { Effect, Actions, ofType } from '@ngrx/effects';
 import { Observable } from 'rxjs';
 import { tap, map, catchError } from 'rxjs/operators';
@@ -14,18 +14,19 @@ export class AuthEffects {
   constructor(private actions: Actions, private authService: AuthService, private router: Router) { }
 
   @Effect()
-  LogIn: Observable<any> = this.actions.pipe(
-    ofType(AuthActionTypes.LOGIN)).pipe(
-      map((action: LogIn) => action.payload)).pipe(switchMap(payload => {
-        return this.authService.logIn(payload.email, payload.password).pipe(
-          map((user) => {
+  LogIn: Observable<any> = this.actions
+      .pipe(ofType(AuthActionTypes.LOGIN))
+      .pipe(map((action: LogIn) => action.payload))
+        .pipe(switchMap(payload => {
+        return this.authService.logIn(payload.email, payload.password)
+        .pipe(map((user) => {
             return new LogInSuccess({ token: user.token, email: payload.email });
           })).pipe(catchError((error) => {
             return of(new LogInFailure({ error }));
           }));
       }));
 
-  @Effect({ dispatch: false })
+  @Effect({dispatch: false })
   LogInSuccess: Observable<any> = this.actions.pipe(
     ofType(AuthActionTypes.LOGIN_SUCCESS),
     tap((user) => {

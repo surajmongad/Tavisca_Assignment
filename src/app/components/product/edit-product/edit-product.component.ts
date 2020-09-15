@@ -22,10 +22,10 @@ export class EditProductComponent implements OnInit {
   errorMessage: string | null;
 
   constructor(
-    public authService: AuthService,
+    private authService: AuthService,
     private route: ActivatedRoute,
     private store: Store<AppState>,
-    public fbs: FormBuilder,
+    private fbs: FormBuilder,
     private router: Router
   ) {
     this.getState = this.store.select(selectMusicState);
@@ -45,7 +45,7 @@ export class EditProductComponent implements OnInit {
     });
 
     this.authService.getProductById(this.id)
-      .subscribe(data => {
+        .subscribe(data => {
         this.editform.setValue(data);
       });
 

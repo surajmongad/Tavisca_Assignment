@@ -18,10 +18,10 @@ describe('LandingComponent', () => {
   };
 
   beforeEach(async(() => {
-    TestBed.configureTestingModule({
+      TestBed.configureTestingModule({
       declarations: [LandingComponent],
       imports: [RouterTestingModule, FormsModule, ReactiveFormsModule, HttpClientTestingModule],
-      providers: [provideMockStore({ initialState }), AuthService],
+        providers: [AuthService, provideMockStore({ initialState })],
       schemas: [CUSTOM_ELEMENTS_SCHEMA]
     })
       .compileComponents();

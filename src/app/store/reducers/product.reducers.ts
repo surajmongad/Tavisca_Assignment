@@ -1,6 +1,13 @@
 import { Product } from '../../models/product';
 // tslint:disable-next-line:max-line-length
-import { LIST_PRODUCTS, LIST_DATA_SUCCESS, ProductActions, ADD_PRODUCTS, UPDATE_PRODUCTS, DELETE_PRODUCTS, DELETE_PRODUCT_SUCCESS, UPDATE_PRODUCT_SUCCESS } from '../actions/product.actions';
+import { LIST_PRODUCTS,
+         LIST_DATA_SUCCESS,
+         ProductActions,
+         ADD_PRODUCTS,
+         UPDATE_PRODUCTS,
+         DELETE_PRODUCTS,
+         DELETE_PRODUCT_SUCCESS,
+         UPDATE_PRODUCT_SUCCESS } from '../actions/product.actions';
 
 export interface State {
   products: Product[];

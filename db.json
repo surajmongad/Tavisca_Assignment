@@ -134,6 +134,26 @@
       "email": "smongad@gmail.com",
       "password": "suraj2020",
       "id": "ypKQkTh"
+    },
+    {
+      "email": "smongad@gmail.com",
+      "password": "suraj2020",
+      "id": "4SQdb1M"
+    },
+    {
+      "email": "smongad@gmail.com",
+      "password": "suraj2020",
+      "id": "WtzifuS"
+    },
+    {
+      "email": "smongad@gmail.com",
+      "password": "suraj2020",
+      "id": "1B9CbWA"
+    },
+    {
+      "email": "sm@gmail.com",
+      "password": "suraj2020",
+      "id": "HqoYAY-"
     }
   ],
   "register": [
@@ -147,6 +167,11 @@
       "email": "sdsds@gmail.com",
       "password": "sddssdsdsd",
       "id": "Wi4dbR8"
+    },
+    {
+      "email": "sm@gmail.com",
+      "password": "suraj2020",
+      "id": "_zYahUb"
     }
   ],
   "products": [
@@ -156,6 +181,13 @@
       "productCategory": "DDDDF",
       "productPrice": 12342,
       "id": 1
+    },
+    {
+      "productName": "Jeans",
+      "productNumber": 4,
+      "productCategory": "Ware",
+      "productPrice": 1000,
+      "id": 2
     }
   ]
 }

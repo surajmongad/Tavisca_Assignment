@@ -2,7 +2,7 @@
   <h2>Registration</h2>
   <form (ngSubmit)="onSubmit()" ngNativeValidate aria-label="Signup form">
     <input [(ngModel)]="user.email" name="email" type="email" required placeholder="Email" id="email" aria-label="UserName Field Of Signup">
-    <input [(ngModel)]="user.password" name="password" type="password" required id="Password" placeholder="password" aria-label="Password Field Of Signup">
+    <input [(ngModel)]="user.password" name="password" type="password" required placeholder="Password" id="password" aria-label="Password Field Of Signup">
     <button class="btn btn-login" type="submit" value="SignUp">Signup</button>
     <button class="btn btn-cancel" [routerLink]="['/']">Cancel</button>
     <p>

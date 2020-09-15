@@ -44,7 +44,6 @@ export class HeaderComponent implements OnInit {
     this.store.dispatch(new LogOut());
     this.router.navigate(['/log-in']);
   }
-
 }
 
 

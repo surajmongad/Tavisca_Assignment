@@ -1,7 +1,6 @@
 import { Action } from '@ngrx/store';
 import { Product } from '../../models/product';
 
-
 export const LIST_PRODUCTS = '[Products] List Fetch';
 export const ADD_PRODUCTS = '[Products] Add Product';
 export const ADD_DATA_SUCCESS = '[Products] Add Success';

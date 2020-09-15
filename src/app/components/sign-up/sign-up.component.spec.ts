@@ -20,8 +20,7 @@ describe('SignUpComponent', () => {
       declarations: [SignUpComponent],
       imports: [FormsModule, ReactiveFormsModule, RouterTestingModule],
       providers: [provideMockStore({ initialState }), AuthService],
-    })
-      .compileComponents();
+    }).compileComponents();
     store = TestBed.inject(MockStore);
   }));
 

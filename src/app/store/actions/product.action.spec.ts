@@ -1,5 +1,18 @@
 // tslint:disable-next-line:max-line-length
-import { ListProducts, LIST_PRODUCTS, ListDataSucess, LIST_DATA_SUCCESS, AddProducts, ADD_PRODUCTS, ADD_DATA_SUCCESS, AddSuccess, UpdateProducts, UPDATE_PRODUCTS, UpdateProductSuccess, UPDATE_PRODUCT_SUCCESS, DeleteProductSuccess, DELETE_PRODUCT_SUCCESS } from './product.actions';
+import { ListProducts,
+         LIST_PRODUCTS,
+         ListDataSucess,
+         LIST_DATA_SUCCESS,
+         AddProducts,
+         ADD_PRODUCTS,
+         ADD_DATA_SUCCESS,
+         AddSuccess,
+         UpdateProducts,
+         UPDATE_PRODUCTS,
+         UpdateProductSuccess,
+         UPDATE_PRODUCT_SUCCESS,
+         DeleteProductSuccess,
+         DELETE_PRODUCT_SUCCESS } from './product.actions';
 import { Product } from '../../models/product';
 
 const newProduct: Product = {

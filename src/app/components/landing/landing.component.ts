@@ -1,6 +1,6 @@
 import { Component, OnInit } from '@angular/core';
 import { Store } from '@ngrx/store';
-import { Observable, from } from 'rxjs';
+import { Observable } from 'rxjs';
 import { Router } from '@angular/router';
 import { AuthService } from '../../services/auth.service';
 import { Product } from '../../models/product';
@@ -13,6 +13,7 @@ import { LogOut } from '../../store/actions/auth.actions';
   styleUrls: ['./landing.component.scss']
 })
 export class LandingComponent implements OnInit {
+
 
   getState: Observable<any>;
   isAuthenticated: false;
@@ -38,7 +39,6 @@ export class LandingComponent implements OnInit {
   }
 
   logOut(): void {
-    // tslint:disable-next-line:new-parens
     this.store.dispatch(new LogOut);
   }
 

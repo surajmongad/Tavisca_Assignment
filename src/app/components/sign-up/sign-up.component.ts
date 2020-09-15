@@ -11,7 +11,6 @@ import { SignUp } from '../../store/actions/auth.actions';
   styleUrls: ['./sign-up.component.scss']
 })
 export class SignUpComponent implements OnInit {
-
   user: User = new User();
   getState: Observable<any>;
   errorMessage: string | null;
@@ -33,5 +32,4 @@ export class SignUpComponent implements OnInit {
     };
     this.store.dispatch(new SignUp(payload));
   }
-
 }
