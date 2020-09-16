@@ -70,6 +70,7 @@ export class AuthService {
       .pipe(catchError(this.errorHandler));
   }
 
+  // tslint:disable-next-line:typedef
   errorHandler(error) {
     let errorMessage = '';
     if (error.error instanceof ErrorEvent) {
